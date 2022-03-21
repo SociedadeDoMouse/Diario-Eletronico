@@ -5,12 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueci minha senha</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/pag.css">
+
 </head>
 <body>
-    <form action="esqueci.php" method="post">
-        <input type="text" placeholder="Digite seu Email" name="email">
-        <input type="submit">
-        <a href="index.html"><p>Fazer login</p></a>
-    </form>  
+    
+        <div class="col-md-5 loginbox" id="loginbox">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+              
+                    <h3>AUXÍLIO DE SENHA</h3>
+                    <hr>
+                    
+                    <div class="row fields"> <p>&nbspDigite seu email a baixo e iremos lhe enviar um email com um link para a troca de senha.</p> </div>
+                    
+                    <div class="row fields">
+                        <span class="col-md-2 col-sm-2 col-xs-2 userpass"><img src="imgs/mailicon.png" class="img-fluid"></span>
+                        <input class="col-md-10" type="text" placeholder="Email" name="email" required>
+                    </div>   
+                    <div class="row fields">
+                        <a href="paglogin.php"><p>Fazer login</p></a>
+                    </div>
+                    <div class="row fields">
+                        <input class="col-md-6 btn btn-info" type="submit" name="recuperar" value="Recuperar">
+                    </div>
+
+                        <?php
+                            if(isset($_POST['recuperar'])){
+                                include 'functions/esqueci.php';
+                            }
+                        ?>
+                        
+            </form>
+        </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+    <script src=""> new WOW().init();</script>
+
 </body>
 </html>
+
+
+
+

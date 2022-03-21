@@ -1,0 +1,70 @@
+body{
+    margin: 0px;
+    background: #DFEEEA;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.loginbox{
+    min-height: 100vh;
+    background-color: #A7C4BC;
+    min-width: 45%;
+}
+.loginbox h3{
+    color: #2F5D62 ;
+    margin-top: 6%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.loginbox input[type=text],input[type=password]{
+    display: inline-block;
+    border: none;
+    outline: 0;
+    padding: 0.3em;
+    max-width: 90%;
+}
+.loginbox input[type=submit]{
+    box-shadow:none !important;
+    background-color: #2F5D62;
+    cursor: pointer;
+    margin: 5% auto;
+    border:none;
+    max-width: 70%;
+}
+.loginbox input[type=submit]:hover{
+    background-color: #2f5d62a4;
+}
+form{
+    margin: auto;
+    margin-top: 30%;
+    width: 90% ;
+}
+.fields {
+    min-height: 20%;
+    margin: 10% auto;
+}
+.fields a{
+    color: #5E8B7E ;
+    margin: auto;
+    text-align: center;
+}
+.userpass{
+    max-width: 15%;
+    background-color: #DFEEEA;
+}
+.userpass img{
+    display: block;
+    margin: 25% auto;
+    height: 20px;
+    width: 20px;
+}
+    
+.eye{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
