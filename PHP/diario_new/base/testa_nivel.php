@@ -12,7 +12,7 @@
 		}
 	}
 	
-	//SE NÃO FOR ARRAY VAI VER SE O NIVEL NECESSÁRIO É DIFE--	RENTE
+	//SE NÃO FOR ARRAY VAI VER SE O NIVEL NECESSÁRIO É DIFERENTE
 	else if(!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] > $nivel_necessario)) {
 		session_destroy();
 		echo "Acesso NEGADO!!!<br><br>";
