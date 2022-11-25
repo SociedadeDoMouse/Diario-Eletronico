@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+
+body { 
+	font-family: 'EB Garamond', serif;
+	max-width: 100vw;
+	max-height:100vh;
+	color: transparent;
+	/* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+
+	/* background-image: url(../img/teste.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat; */
+
+	background-color: #2f4477;
+}
+
+.logo{
+	filter: invert(1);
+	margin-left:  30%;
+	text-align: center;
+}
+
+.card {
+	color: black;
+	border: none;
+	background-color: transparent;
+	width: 90vw;	
+	height: 80vh !important;
+	margin: auto;
+	margin-top: 5%;
+}
+@media (max-width: 992px){
+	.card{
+		margin-top: 20%;
+		width: 80vw;	
+		height: 40vh !important;
+	}
+}
+.card-title{
+	margin: auto;
+	text-align: center;
+	margin-top:12%;
+}
+h3::before{
+    content: "";
+    background-image: url(../img/after-title.png);
+    background-size: cover;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    transform: translate(-105%, 5%);
+  } 
+
+  .card-right hr{
+	background-color: #232f6bd5 !important;
+	width: 90% !important;
+	justify-content: center;
+  }
+
+.card-body{
+	justify-content: center;
+	margin-top: 5%;
+	max-height: 80%;
+}
+.card-body a{
+	padding :5px;
+	color: black;
+	text-align: right;
+}
+.card-body a:hover{
+	color: #1978a8;
+	text-decoration: none;
+}
+.card-left{
+	max-height: 100%;
+	background: rgb(0, 0, 0);
+	background: radial-gradient(circle, rgba(195,204,202,1) 0%, rgba(42,63,84,1) 100%);	
+	background-image: url(../img/teste.svg);
+	background-repeat: no-repeat;	
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.card-right{
+	margin-top: 1.5%;
+	max-height: 95%;
+	background-color: #ffffff;
+
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+input[type=text],input[type=password]{
+	margin: 8% auto;
+	width: 70%;
+	border-color: #4b6cb7;
+	border-radius: 30px;
+	padding: 15px;
+}
+
+.login-submit{
+	margin-top: 7%;
+	color: white;
+    box-shadow:none !important;
+    background-color: #232F6B;
+    cursor: pointer;
+	border: none;
+    border-radius: 50px !important;
+    width: 55%;
+	height: 40px;
+}
+.login-submit:hover{
+	color: rgb(0, 0, 0);
+    background-color: #232f6bd5;  
+	border-color: #1978a8;
+}.login-submit::after{
+	background-color: #232f6bd5;  
+}
+
+.form-group{
+    width: 100%;
+}
+
+.logoArea{
+	margin:auto;
+	text-align:center;
+}
+.logoArea img{
+	width: 280px;
+}
+
+.bannerTitle{
+	text-align: center;
+}
+h1{
+	text-align: center;
+	/* border-right: 2px solid white;
+	margin: 0 auto ;
+
+	white-space: nowrap;
+    overflow: hidden; */
+	color: white;
+}
+
+
+@media screen and (max-width:1000px) {
+	body{
+		overflow: hidden; 
+	}
+	.bannerTitle{
+		display: none !important;
+	}
+	.alert{
+		text-align:center;
+	}
+	.logoArea .alert{
+		width:105%;
+		font-size:20pt;
+		left:-5%;
+	}
+	.card-left{
+		margin:auto;
+		width:100vw;
+		height:400px;
+		flex:none !important;
+		max-width: 95vw !important;
+	}
+	.logoArea{
+		width:80vw;
+	}
+	.card{
+		width:100vw;
+		height:100vh;
+		margin-top:0;
+	}
+	.card-right{
+
+		flex:none !important;
+		max-width: 95vw !important;
+		margin-left:0;
+		max-height: 100vh !important;
+		height:100vh;
+
+		
+		margin:auto;
+
+		font-size:30pt;
+
+		overflow:block;
+		
+	}
+	.card-right button{
+			height:100px;
+		}
+
+	.card-right input{
+		font-size:30pt;
+		height:100px;
+	}
+
+	h3{
+		font-size:40pt;
+	}
+	h3::before{
+		height: 60px;
+		width: 60px;
+	}
+}
+
+/* .typing-animation{
+	animation: typing 2s steps(28) 1s normal both, blinkCursor 600ms steps(28) infinite normal;
+}
+
+@keyframes typing {
+	from{
+		width: 0;
+	}
+	to{
+		width: 5em;
+	}
+}
+
+@keyframes blinkCursor {
+	from{
+		border-right-color: rgba(195,204,202, 0.75);
+	}
+	to{
+		border:none;
+	}
+} */
+/* .logoArea h1{
+	font-family: 'Lexend', sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 3em;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: .15em;
+} */

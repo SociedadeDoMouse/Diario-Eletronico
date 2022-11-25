@@ -1,0 +1,46 @@
+.capa_diario{
+    margin: auto;
+    width: 100%;
+    font-size: 15pt;
+}
+.capa_diario table, thead, td, th{
+    border: none;
+    font-size: 12pt;
+}
+.capa_diario_corpo{
+    background-color: rgb(220, 220, 220);
+    width: 80%;
+    margin: 30% auto;
+    text-align: left;
+    font-size: 10pt;
+}
+.capa_diario_footer{
+    background-color: rgb(220, 220, 220);
+    width: 80%;
+    margin: 35% auto;
+    text-align: left;
+    font-size: 13pt;
+}
+
+th{
+    text-align: center;
+    font-size: 0.7em;
+    background-color: rgb(220, 220, 220);
+}
+td{
+    font-size: 1em;
+
+}
+
+tfoot td{
+    max-height: 80px !important;
+    font-size: 0.7em;
+
+}
+ tfoot td{
+    border: none;
+}  
+
+h2{
+    text-align: center;
+}

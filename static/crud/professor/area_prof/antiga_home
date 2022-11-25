@@ -1,0 +1,73 @@
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header prof">
+                        <h3 class="card-subtitle">Área de Turmas</h3>
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Título do card</h5> -->
+                        <div class="card-text">
+                            <?php
+                                     $sql = "select d.id_disc, n_turma, nome_disc, c.id_cursa from usuario u inner join professor p on p.id_usur = u.id_usur inner join ministra m on m.mat_prof = p.mat_prof inner join cursa c on m.id_cursa = c.id_cursa inner join disciplina d on c.id_disc = d.id_disc where u.id_usur = ".$_SESSION['UsuarioID']." order by id_disc, n_turma";
+    
+                                    $resultado = mysqli_query($con, $sql);
+                                    $info = mysqli_fetch_array($resultado); 
+
+                                     echo '<div class="col" style="border-left: 2px solid #4f869d;border-bottom: 2px solid #4f869d;border-radius:15px;">
+                                     <div class="card" style="min-height:200px;">
+                                         <div class="card-body">
+                                             <h2>Turma '.$info['n_turma'].'</h2>
+                                             <h3>'.$info['nome_disc'].'</h3>
+                                         </div>
+                                         <div class="card-body">
+                                             <button href="#" class="btn btn-success">Avaliações</button>
+                                             
+                                             <a href="?page=fadd_freq&cursa='.$info['id_cursa'].'" class="btn btn-info">Frequencia</a>
+                                         </div>
+                                     </div>
+                                 </div>';
+                                 
+                            ?>
+                        </div>
+                        <center> <hr> <br> <a href="?page=turmas_prof" class="btn btn-primary">Ver Todas</a> </center>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header prof">
+                         <h3 class="card-subtitle">Lançar Conteúdos</h3>
+
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <div class="card-text">
+                            <?php 
+                                include "base/functions/formdata.php";
+                                $sql = "SELECT * FROM conteudo AS cn
+                                INNER JOIN ministra AS m ON cn.id_ministra = m.id_ministra
+                                INNER JOIN cursa AS c ON c.id_cursa = m.id_cursa
+                                INNER JOIN disciplina AS d ON d.id_disc = c.id_disc
+                                INNER JOIN professor AS p ON p.mat_prof = m.mat_prof
+                                WHERE p.id_usur = ".$_SESSION['UsuarioID'];
+
+                                $resultado = mysqli_query($con, $sql);
+                                $info = mysqli_fetch_array($resultado); 
+
+                                echo '<div class="col" style="border-left: 2px solid #4f869d;border-bottom: 2px solid #4f869d;border-radius:15px;">
+                                <div class="card" style="min-height:200px;">
+                                    <div class="card-body">
+                                        <h2> Turma '.$info['n_turma'].'</h2>
+                                        <h5> Matéria: '.$info['nome_disc'].'</h5>
+                                        <h5> Data: '.formdata($info['data_cont']).'</h5>
+                                        <p> Conteúdo: '.$info['desc_cont'].' </p>
+                                    </div>
+                                </div>
+                            </div>';
+                            ?>
+                        </div>
+                        <center> <hr> <br> <a href="?page=lista_cont" class="btn btn-primary">Ver Todos</a> </center>
+                    </div>
+                </div> 
+            </div>

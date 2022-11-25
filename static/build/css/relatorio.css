@@ -1,0 +1,73 @@
+table{
+    width: 100%;
+}
+table, thead, td, th{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 0.5px solid black;
+}
+
+th{
+    text-align: center;
+    font-size: 0.7em;
+    background-color: rgb(220, 220, 220);
+}
+td{
+    font-size: 0.7em;
+
+}
+
+tfoot td{
+    max-height: 80px !important;
+    font-size: 0.7em;
+
+}
+ tfoot td{
+    border: none;
+}  
+
+#relatorio_frequencia th:nth-child(1){
+    transform: rotate(270deg)
+}
+
+.header_relatorio_individual{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0 !important;
+}
+.header_relatorio_individual th{
+    padding: 5px;
+}
+
+#relatorio_individual{
+    margin-top: 3%;
+}
+#relatorio_individual th{
+    padding: 1px;
+}
+
+.footer_relatorio_individual{
+    margin-top: 3%;
+    margin-bottom: -20%;
+    width: 40%;
+    position: absolute;
+    text-align: center;
+    bottom: 0 !important;
+}
+.footer_relatorio_individual th{
+    padding: 3px;
+}
+
+
+#td_red{
+    background-color: rgb(238, 60, 60);
+}
+
+.len_minTD{
+    width: 25px;
+}
+.len_maxTD{
+    width: 140px;
+}
